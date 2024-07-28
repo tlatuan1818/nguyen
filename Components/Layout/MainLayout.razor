@@ -1,0 +1,71 @@
+@inherits LayoutComponentBase
+<RadzenComponents />
+
+<RadzenLayout>
+    <RadzenHeader Style="display: flex; height: 70px; padding: 10px; background-color: #ffffff" class="rz-justify-content-space-between">
+    <RadzenStack Orientation="Radzen.Orientation.Horizontal" AlignItems="Radzen.AlignItems.Center" Gap="10px" JustifyContent="Radzen.JustifyContent.Start" Reverse="false" Wrap="Radzen.FlexWrap.Wrap">
+                <RadzenImage Path="images\logo.svg" AlternateText="www.nguyen.vn" />
+                <RadzenText Text="Teamwear" Style="font-family: Open Sans; text-transform: uppercase; font-weight: normal; letter-spacing: 10px; margin: 0px; color: #000000; vertical-align: middle; width: 155px" TextAlign="Radzen.TextAlign.Left" TagName="Radzen.Blazor.TagName.Span" />
+    </RadzenStack>
+     <RadzenStack Orientation="Orientation.Horizontal" AlignItems="Radzen.AlignItems.Center" Gap="10" Wrap="Radzen.FlexWrap.NoWrap" JustifyContent="Radzen.JustifyContent.End" Style="width: 150px">
+                <RadzenButton ButtonStyle="Radzen.ButtonStyle.Light" Style="padding: 0px; background-color: #ffffff; border-radius: 4px" Size="Radzen.ButtonSize.Small">
+                    <RadzenImage Path="images\Person.svg" Style="width: 40px" ></RadzenImage>
+                </RadzenButton>
+                <RadzenButton ButtonStyle="Radzen.ButtonStyle.Light" Style="padding: 0px; background-color: #ffffff; border-radius: 4px" Size="Radzen.ButtonSize.Small">
+                    <RadzenImage Path="images\Cart.svg" Style="width: 40px" ></RadzenImage>
+                </RadzenButton>
+                <RadzenButton ButtonStyle="ButtonStyle.Light" Style="padding: 0px; background-color: #ffffff; border-radius: 4px" Size="Radzen.ButtonSize.Small">
+                    <RadzenImage Path="images\Info.svg" Style="width: 40px" ></RadzenImage>
+                </RadzenButton>
+            </RadzenStack>
+       
+      
+    </RadzenHeader>
+     <RadzenSidebar @bind-Expanded="@sidebar1Expanded">
+        <RadzenStack AlignItems="Radzen.AlignItems.Start" JustifyContent="Radzen.JustifyContent.Start" Orientation="Radzen.Orientation.Vertical" Gap="10">
+                        <RadzenLink Text="Fanshop" Path="" Style="position: relative">
+                            <RadzenStack Style="position: absolute; width: 100%; height: 100%" AlignItems="Radzen.AlignItems.Start" JustifyContent="Radzen.JustifyContent.Center" Orientation="Radzen.Orientation.Vertical" Visible="true">
+                                    <RadzenText Text="Fanshop" TagName="Radzen.Blazor.TagName.Span" TextStyle="Radzen.Blazor.TextStyle.Subtitle1" Style="color: #ffffff; font-size: 18px; font-weight: bold; font-family: Open sans; margin-bottom: 0px; margin-left: 25px"/>
+                                    <RadzenText Text=" Click vào để xem tất cả trang phục các câu lạc bộ" TagName="Radzen.Blazor.TagName.Span" TextStyle="Radzen.Blazor.TextStyle.Caption" Style="color: #ffffff; font-family: Open sans; margin-bottom: 0px; margin-left: 25px; width: 210px" Visible="true"/>
+                            </RadzenStack>
+                            <RadzenImage Path="images\fanshop.png" AlternateText="Fanshop" class="w-100">
+                               
+                               
+                            </RadzenImage>
+                        </RadzenLink>
+
+                        <RadzenLink Text="Fanshop" Path="">
+                            <RadzenImage Path="images\footballboots.png" AlternateText="Fanshop" class="w-100">
+                            </RadzenImage>
+                        </RadzenLink>
+
+                        <RadzenLink Text="Fanshop" Path="">
+                            <RadzenImage Path="images\teamwear.png" AlternateText="Fanshop"  class="w-100">
+                            </RadzenImage>
+                        </RadzenLink>
+
+                        <RadzenLink Text="Fanshop" Path="">
+                            <RadzenImage Path="images\clothing.png" AlternateText="Fanshop" class="w-100">
+                            </RadzenImage>
+                        </RadzenLink>
+                        <RadzenLink Text="Fanshop" Path="">
+                            <RadzenImage Path="images\footballs&equiment.png" AlternateText="Fanshop" class="w-100">
+                          </RadzenImage>
+                        </RadzenLink>
+                    </RadzenStack>
+       
+    </RadzenSidebar>
+    <RadzenBody Expanded="false">
+                    <div class="rz-p-4" style="color: #000000">
+                        Body
+                    </div>
+       
+                </RadzenBody>
+    <RadzenFooter>
+        Footer
+    </RadzenFooter>
+</RadzenLayout>
+
+@code {
+     bool sidebar1Expanded = true;
+}
